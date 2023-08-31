@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - changeSet:
+      id: add_columns_congratulation
+      author: pikalova.a
+      tagDatabase: Version 1
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: date_send
+                  type: TIMESTAMP
+              - column:
+                  name: forward
+                  type: BIGINT
+              - column:
+                  name: receiver
+                  type: CHARACTER VARYING
+            tableName: congratulation

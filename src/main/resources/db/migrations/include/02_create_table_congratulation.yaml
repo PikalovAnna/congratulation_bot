@@ -1,0 +1,39 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_table_congratulation
+      author: pikalova.a
+      tagDatabase: Version 1
+      preConditions:
+        onFail: 'MARK_RAN'
+        not:
+          tableExists:
+            schemaName: public
+            tableName: congratulation
+      changes:
+        - createTable:
+            tableName: congratulation
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: text
+                  type: CHARACTER VARYING
+              - column:
+                  name: sticker_id
+                  type: CHARACTER VARYING
+              - column:
+                  name: date_create
+                  type: TIMESTAMP
+                  constraints:
+                    nullable: false
+              - column:
+                  name: id_users
+                  type: BIGINT
+                  constraints:
+                    foreignKeyName: fk_user_congratulation
+                    references: users(id)

@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: version 1
+      author: pikalova.a
+      tagDatabase: Version 1
+  - include:
+      file: include/01_create_table_users.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: include/02_create_table_congratulation.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: include/03_add_column_photo_id_congratulation.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: include/04_add_column_action_status_users.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: include/05_add_columns_congratulation.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: include/06_add_column_status_congratulation.yaml
+      relativeToChangelogFile: true

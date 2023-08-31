@@ -1,0 +1,15 @@
+Configuration:
+  packages: org.communis.corella.config
+  Appenders:
+    Console:
+      - name: ConsoleAppender
+        target: SYSTEM_OUT
+        follow: true
+        Log4jJsonLayout:
+          compact: true
+  Loggers:
+    Root:
+      level: info
+      additivity: false
+      AppenderRef:
+        - ref: ConsoleAppender

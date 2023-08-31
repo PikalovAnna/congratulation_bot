@@ -1,0 +1,26 @@
+server.port: 8080
+
+bot:
+  botUsername:
+  botToken:
+  botPath:
+#  proxyType: SOCKS5
+#  proxyHost: localhost
+#  proxyPort: 9150
+application:
+  timezone: Europe/Moscow
+spring:
+  application:
+    name: congratulations_bot
+  datasource:
+    url: jdbc:postgresql://
+    username: postgres
+    password: postgres
+  liquibase:
+    change-log: classpath:/db/migrations/changelog.yaml
+    enabled: true
+managment:
+  endpoints:
+    web:
+      exposure:
+        include: '/health'

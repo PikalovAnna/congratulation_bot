@@ -1,0 +1,12 @@
+databaseChangeLog:
+  - changeSet:
+      id: add_column_photo_id_congratulation
+      author: pikalova.a
+      tagDatabase: Version 1
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: photo_id
+                  type: CHARACTER VARYING
+            tableName: congratulation

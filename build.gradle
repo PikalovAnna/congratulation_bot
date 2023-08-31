@@ -1,0 +1,28 @@
+plugins {
+	id 'org.springframework.boot' version '2.3.5.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+	id 'java'
+}
+
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile 'org.springframework.boot:spring-boot-starter-web'
+
+	compile 'org.springframework.boot:spring-boot-starter-data-jpa'
+	compile 'org.postgresql:postgresql'
+	compile 'org.liquibase:liquibase-core'
+
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+	compile 'org.telegram:telegrambots-spring-boot-starter:4.4.0.2'
+	compile 'org.springframework.boot:spring-boot-starter-actuator'
+}

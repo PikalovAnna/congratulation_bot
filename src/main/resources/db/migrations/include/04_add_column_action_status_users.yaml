@@ -1,0 +1,12 @@
+databaseChangeLog:
+  - changeSet:
+      id: add_column_action_status_users
+      author: pikalova.a
+      tagDatabase: Version 1
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: action_status
+                  type: CHARACTER VARYING
+            tableName: users
